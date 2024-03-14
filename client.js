@@ -2,11 +2,6 @@ const listName = ["バックログ", "タスク", "進行中", "保留", "確認
 var boardInfo;
 TrelloPowerUp.initialize(
   {
-    appKey: "my-trello-key",
-    appName: "My Power-Up",
-    appAuthor: "My Company",
-  },
-  {
     'board-buttons': function(t, options){
       return[{
         icon: 'https://c-anupat.github.io/icon.svg',
@@ -36,4 +31,9 @@ TrelloPowerUp.initialize(
         }
       }];
     },
+  },
+  {
+    appKey: "my-trello-key",
+    appName: "My Power-Up",
+    appAuthor: "My Company",
   });
