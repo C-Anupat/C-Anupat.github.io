@@ -7,10 +7,9 @@ TrelloPowerUp.initialize({
         callback: function(t){
           return t.board("all")
           .then(function(board){
-            console.log("Type of arugument:" + typeof board);
-            let boardInfo = JSON.stringify(board, null, 2);
-            console.log("Board Name:" + boardInfo.name);
-            console.log("Board ID: " + boardInfo.id);
+            let boardInfo = board;
+            console.log("Board Name:" + boardInfo["name"]);
+            console.log("Board ID: " + boardInfo["id"]);
           });
         }
       }];
