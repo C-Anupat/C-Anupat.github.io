@@ -7,7 +7,7 @@ TrelloPowerUp.initialize({
         callback: function(t){
             return t.popup()({
                 title: "DropBox",
-                url: "/DropBox/dropbox.html"
+                url: "./DropBox/dropbox.html"
             })
         }
       }];
