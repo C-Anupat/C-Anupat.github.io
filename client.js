@@ -31,9 +31,4 @@ TrelloPowerUp.initialize(
         }
       }];
     },
-  },
-  {
-    appKey: "my-trello-key",
-    appName: "My Power-Up",
-    appAuthor: "My Company",
   });
