@@ -1,19 +1,18 @@
+var boardInfo;
 TrelloPowerUp.initialize({
     'board-buttons': function(t, options){
-      t.board("id", "name")
-      .then(function(board){
-        console.log(JSON.stringify(board, null, 2));
-      });
       return[{
         icon: 'https://c-anupat.github.io/icon.svg',
         text: 'PowerUpTest',
         callback: function(t){
-            return t.modal({
-                title: "ConsoleOutput",
-                // url: "./ConsoleOutput/consoleoutput.html"
-            })
+          t.board("all")
+          .then(function(board){
+            let boardInfo = JSON.parse(board);
+            console.log(boardInfo.name);
+            console.log(boardInfo.name);
+          });
         }
-      }]
+      }];
     },
     'card-buttons': function(t, options){
       return [{
