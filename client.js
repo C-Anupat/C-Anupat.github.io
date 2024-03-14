@@ -1,8 +1,8 @@
 TrelloPowerUp.initialize({
     'board-buttons': function(t, options){
-      t.get('board', 'shared')
-      .then(function(data){
-        console.log(JSON.stringify(data, null, 2));
+      t.board("id", "name")
+      .then(function(board){
+        console.log(JSON.stringify(board, null, 2));
       });
       return[{
         icon: 'https://c-anupat.github.io/icon.svg',
