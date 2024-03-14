@@ -14,7 +14,7 @@ TrelloPowerUp.initialize(
         callback: function(t){
           return(t.board("all"))
           .then(function(board){
-            boardInfo = board;
+            let boardInfo = board;
             console.log("Trello Key: " + appKey);
             console.log("Power-Up Name: " + appName);
             console.log("Company: " + appAuthor);
