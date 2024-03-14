@@ -1,18 +1,16 @@
 <html>
     <head>
         <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css"/>
-        <!-- <style>
-            select{
-                height: 30px;
-            }
-        </style> -->
         <script src="https://p.trellocdn.com/power-up.min.js"></script>
     </head>
     <script src="dropbox.js"></script>
     <body>
-        <form id="dropbox">
-            <label for="dropboxSize">DropBox:</label>
-            <select name="size" id="dropboxSize">
+        <!-- Begin the definition of whole DropBox Content -->
+        <form id="dropbox" style="width: auto;height: auto;">
+            
+            <!-- Begin the definition of "select" section of DropBox Content -->
+            <label for="dropboxSelect">Select:</label>
+            <select name="select" id="dropboxSelect">
                 <option value="select1">Select1</option>
                 <option value="select2">Select2</option>
                 <option value="select3">Select3</option>
@@ -20,6 +18,21 @@
                 <option value="select5">Select5</option>
             </select>
             <button type="submit" class="mod-primary">Save</button>
+            <!-- End the definition of "select" section of DropBox Content -->
+            
+            <!-- Begin the definition of "remove" section of DropBox Content -->
+            <label for="dropboxRemove">Remove:</label>
+            <select name="remove" id="dropboxRemove">
+                <option value="remove1">Remove1</option>
+                <option value="remove2">Remove2</option>
+                <option value="remove3">Remove3</option>
+                <option value="remove4">Remove4</option>
+                <option value="remove5">Remove5</option>
+            </select>
+            <button type="submit" class="mod-primary">Remove</button>
+            <!-- End the definition of "remove" section of DropBox Content -->
+
         </form>
+        <!-- End the definition of whole DropBox Content -->
     </body>
 </html>
