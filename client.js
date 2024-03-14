@@ -12,7 +12,7 @@ TrelloPowerUp.initialize(
         icon: 'https://c-anupat.github.io/icon.svg',
         text: 'PowerUpTest',
         callback: function(t){
-          return(board)
+          return(t.board("all"))
           .then(function(board){
             boardInfo = board;
             console.log("Trello Key: " + appKey);
