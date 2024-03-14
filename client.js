@@ -7,7 +7,7 @@ TrelloPowerUp.initialize(
         icon: 'https://c-anupat.github.io/icon.svg',
         text: 'PowerUpTest',
         callback: function(t){
-            let boardInfo = board;
+            let boardInfo = t.board("all");
             console.log("Board Name: " + boardInfo["name"]);
             console.log("Board ID: " + boardInfo["id"]);
         }
