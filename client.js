@@ -5,7 +5,7 @@ TrelloPowerUp.initialize({
         // icon: 'icon.svg',
         text: 'Hello',
         callback: function(t){
-            return t.popup()({
+            return t.popup({
                 title: "DropBox",
                 url: "./DropBox/dropbox.html"
             })
