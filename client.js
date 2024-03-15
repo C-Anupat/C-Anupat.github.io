@@ -1,3 +1,5 @@
+module.exports = require();
+
 require('dotenv').config();
 console.log(process.env);
 const listName = ["バックログ", "タスク", "進行中", "保留", "確認待ち", "完了"];
