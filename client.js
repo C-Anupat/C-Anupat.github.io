@@ -1,7 +1,5 @@
-const apiKey = process.env.API_KEY;
-const apiToken = process.env.API_TOKEN;
 const listName = ["バックログ", "タスク", "進行中", "保留", "確認待ち", "完了"];
-
+const apiCredential = require('./environment.js');
 var boardInfo;
 
 TrelloPowerUp.initialize(
@@ -12,9 +10,9 @@ TrelloPowerUp.initialize(
         text: 'PowerUpTest',
         callback: function(t){
           return t.board("all").then(function(board){
-            let boardInfo = board;
-            console.log("API Key: " + apiKey);
-            console.log("API Token: " + apiToken);
+            boardInfo = board;
+            console.log("API Key: " + apiCredential[apiKey]);
+            console.log("API Token: " + apiCredential[apiToken]);
             console.log("Board Name: " + boardInfo["name"]);
             console.log("Board ID: " + boardInfo["id"]);
           });
