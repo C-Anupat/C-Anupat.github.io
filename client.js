@@ -9,10 +9,21 @@ TrelloPowerUp.initialize(
         icon: 'https://c-anupat.github.io/icon.svg',
         text: 'PowerUpTest',
         callback: function(t){
-          return(t.getRestApi().getToken()
+          return t.getRestApi().getToken()
           .then(function(token){
             if(!token){
               console.log("Fail to get token");
+              return [
+                {
+                  text: "PowerUpTest",
+                  callback: function(t){
+                      return t.popup({
+                        title: "Authorize to continue",
+                        url: "authorize.html"
+                      })
+                  }
+                }
+              ]
             }
             else{
               let apiKey = appKey;
@@ -20,7 +31,7 @@ TrelloPowerUp.initialize(
               console.log("API Key: " + apiKey);
               console.log("API Token: " + apiToken);
             }
-          }));
+          });
           // boardPromise.then(function(board){
           //   let boardInfo = board;
           //   console.log("Board Name: " + boardInfo["name"]);
