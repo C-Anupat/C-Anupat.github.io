@@ -19,7 +19,7 @@ TrelloPowerUp.initialize(
                   callback: function(t){
                       return t.popup({
                         title: "Authorize to continue",
-                        url: "authorize.html"
+                        url: "./authorize.html"
                       })
                   }
                 }
