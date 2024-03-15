@@ -1,3 +1,5 @@
+require('dotenv').config();
+console.log(process.env);
 const listName = ["バックログ", "タスク", "進行中", "保留", "確認待ち", "完了"];
 const apiCredential = fetch('./environment.js');
 var boardInfo;
@@ -11,8 +13,6 @@ TrelloPowerUp.initialize(
         callback: function(t){
           return t.board("all").then(function(board){
             boardInfo = board;
-            console.log("API Key: " + apiCredential[apiKey]);
-            console.log("API Token: " + apiCredential[apiToken]);
             console.log("Board Name: " + boardInfo["name"]);
             console.log("Board ID: " + boardInfo["id"]);
           });
