@@ -7,13 +7,10 @@ TrelloPowerUp.initialize(
         icon: 'https://c-anupat.github.io/icon.svg',
         text: 'PowerUpTest',
         callback: function(t){
-            boardPromise.then(function(board){
+          return t.board("all").then(function(board){
             let boardInfo = board;
             console.log("Board Name: " + boardInfo["name"]);
             console.log("Board ID: " + boardInfo["id"]);
-          })
-          .then(function(board){
-            
           });
         }
       }];
