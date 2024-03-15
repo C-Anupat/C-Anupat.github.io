@@ -4,11 +4,6 @@ var apiKey;
 var apiToken;
 TrelloPowerUp.initialize(
   {
-    appKey: "my-api-key",
-    appName: "My Trello App",
-    appAuthor: "My Company",
-  },
-  {
     'board-buttons': function(t, options){
       return[{
         icon: 'https://c-anupat.github.io/icon.svg',
@@ -49,5 +44,10 @@ TrelloPowerUp.initialize(
         }
       }];
     },
+  },
+  {
+    appKey: "my-api-key",
+    appName: "My Trello App",
+    appAuthor: "My Company",
   }
 );
