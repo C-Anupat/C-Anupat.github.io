@@ -1,5 +1,5 @@
 const listName = ["バックログ", "タスク", "進行中", "保留", "確認待ち", "完了"];
-const apiCredential = require('./environment.js');
+const apiCredential = fetch('./environment.js');
 var boardInfo;
 
 TrelloPowerUp.initialize(
