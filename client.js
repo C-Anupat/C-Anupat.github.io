@@ -25,7 +25,7 @@ TrelloPowerUp.initialize(
               console.log("API Key: " + apiKey);
               console.log("API Token: " + apiToken);
             }
-          }))
+          }));
           // boardPromise.then(function(board){
           //   let boardInfo = board;
           //   console.log("Board Name: " + boardInfo["name"]);
